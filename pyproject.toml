@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project]
+name = "WISDAMcore"
+version = "0.0.1"
+authors = [
+  { name="Martin Wieser"},
+]
+description = "A package to map the coordinates of images with georeference to 3D or project 3D coordinates into an image. This package can be used to work with perspective imagery or orthophotos."
+readme = "readme.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha"
+]
+
+dependencies = [
+    'numpy>=1.26.0',
+    'pyproj==3.6.1',
+	'shapely>=2.0.1',
+	'rasterio>=1.3.8'
+    ]
+
+[project.optional-dependencies]
+test = [
+    'pytest>=8.0.0'
+]
+coverage = [
+    'coverage>=7.5.4'
+]
+
+
+[tool.coverage.report]
+exclude_lines = ["@abstractmethod", "@abc.abstractmethod"]
+
+[tool.coverage.run]
+omit = ["*/dev_code/*.py"]
+source = ["src/WISDAMcore"]
+command_line = "-m pytest"
+
+[tool.pytest.ini_options]
+pythonpath = [  ".", "src"]
+testpaths = ["tests"]
+
+
+[project.urls]
+    "Homepage" = "https://github.com/WISDAMapp/WISDAMcore"
+    "Bug Tracker" = "https://github.com/WISDAMapp/WISDAMcore/issues"
+
