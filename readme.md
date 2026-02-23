@@ -1,10 +1,19 @@
 > [!WARNING]
 > LEGACY-VERSION.
-> This Version 0.0.1 is not any longer maintained or developed.
-> It is currently still used for the current Versions of WISDAMapp
-> The new version is a complete refactoring and update of the mathematically base.
-> Most of the functions here are implemented long time ago where the focus was on WISDAMapp.
+>
+> 
+> This repositoryis not any longer maintained or developed.
+> It is currently still used for the latest released Version of WISDAMapp
+>
+> Most of the functions here are implemented long time ago where WISDAM was still calle DugongDetector.
 > Do not expect all mappings or projections are correct for high accurate geo-reference data.
+> 
+> Startin from the upcoming WISDAMapp version 2.0, the new geometric backbone **weitsicht** will be used.
+> The new version is a complete refactoring and update of the mathematically base, with rich documentation.
+>
+> The new repository is called **weitsicht** and can be found here:\
+> https://pypi.org/project/weitsicht/ \
+> https://github.com/MartinW-S2M/weitsicht
 
 
 # WISDAMcore
@@ -218,5 +227,6 @@ specific language governing permissions and limitations
 under the License.
 
 See ``LICENSE`` for more details.
+
 
 [Go to Top](#table-of-contents)
